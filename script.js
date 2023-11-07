@@ -50,10 +50,8 @@ function showQuestion(index) {
   options.innerHTML = "";
 
   if (question.inputs) {
-    // Add an input field for questions that require a text answer.
     inputs.innerHTML = `<input type="text" id="answer-${index}">`;
   } else {
-    // Display the answer buttons for questions that have multiple choice answers.
     question.options.forEach((option, i) => {
       options.innerHTML += `<button type="button" onclick="checkAnswer(${i}, ${index})">${option}</button>`;
     });
